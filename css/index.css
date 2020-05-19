@@ -48,9 +48,22 @@ a, body {
 	font-size: 8vw;
 }
 
+/* Phone */
+
 @media (max-width: 576px) {
 	.overlay-image {
-		display: none;
+        top: 29%;
+	}
+	.overlay-image a {
+		font-size: 10px;
+	}
+}
+
+/* Tablet */
+
+@media (min-width: 768px) and (max-width: 1024px) {
+	.overlay-image {
+        top: 30%;
 	}
 }
 
@@ -60,6 +73,7 @@ a, body {
 	font-weight: 300;
 }
 
-.first-letter {
-	font-size: 5vw;
+.container p::first-letter {
+	font-size: 400%;
+	padding: 2px;
 }

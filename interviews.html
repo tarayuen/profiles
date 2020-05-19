@@ -9,20 +9,30 @@
     <link rel="stylesheet" href="css/interviews.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;500;900&family=Roboto:ital,wght@0,300;0,500;0,900;1,300&display=swap" rel="stylesheet">
 
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.5/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.5/angular-route.min.js"></script>
+    <script src="js/interviews.js"></script>
+
     <title>PROFILES</title>
   </head>
-  <body>
+  <body ng-app="myApp">
     <!-- Navbar -->
-    <div class="d-flex justify-content-center"><a class="navbar-brand ml-3" href="//projectsparrow.me">
+    <div class="d-flex justify-content-center"><a class="navbar-brand ml-3" href="">
       <span class="">PROFILES</span>
     </a></div>
     <nav class="navbar sticky-top navbar-light bg-light justify-content-center">
-      <a class="nav-link active" href="//projectsparrow.me">SYDE 2020</a>
+      <a class="nav-link active" href="index.html">SYDE 2020</a>
     </nav>
     
     <!-- Content -->
     <div class="container">
-      <div class="d-flex justify-content-center flex-wrap">
+      <div class="d-flex justify-content-center flex-wrap"ng-controller="myCtrl">
+        <div class="p-2 bd-highlight thumbnail" ng-repeat="friend in friends">
+          <a href="interviews/interview.html#{{friend.nickName}}">
+            <img src="thumbnails/{{friend.nickName}}.jpg">
+            <p>{{friend.firstName}} {{friend.lastName}}</p>
+          </a>
+        </div>
       </div>
     </div>
 
