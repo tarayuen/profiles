@@ -8,6 +8,13 @@ a, body {
 	color: #212121;
 }
 
+.center {
+	margin: auto;
+	width: 50%;
+	text-align: center;
+	padding-bottom: 20px;
+}
+
 .navbar-brand {
 	padding: 20px 0 20px 0;
 	font-weight: 900;
